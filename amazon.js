@@ -1,4 +1,4 @@
-// Show Sign-in Modal
+
 document.querySelector(".nav-sigin").addEventListener("click", () => {
   document.getElementById("signin-modal").style.display = "flex";
 });
@@ -18,14 +18,11 @@ function validateLogin() {
   } else {
     alert("Invalid username or password");
   }
-}
-
-// Scroll to top
+} 
 document.querySelector(".foot-pannel1").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
-// Live Search
+ 
 document.querySelector(".search-input").addEventListener("input", function () {
   const term = this.value.toLowerCase();
   const boxes = document.querySelectorAll(".box");
@@ -33,8 +30,7 @@ document.querySelector(".search-input").addEventListener("input", function () {
     box.style.display = box.innerText.toLowerCase().includes(term) ? "block" : "none";
   });
 });
-
-// Add-to-cart and cart count
+ 
 let cartCount = 0;
 const boxes = document.querySelectorAll(".box");
 boxes.forEach(box => {
@@ -52,3 +48,4 @@ boxes.forEach(box => {
   };
   box.querySelector(".box-content").appendChild(btn);
 });
+
